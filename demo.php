@@ -26,6 +26,8 @@ var_dump($res); // true or false, if error
 // demo order items
 $items = [
   [
+    'v' => 1, // API version
+    't' => 'item',
     'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
     'cid' => $ga->get_cid(), // Client ID
     'ti' => 846478558, // Unique transaction (order) id (same as above)
@@ -36,6 +38,8 @@ $items = [
     'cu' => 'USD' // Currency
   ],
   [
+    'v' => 1,
+    't' => 'item',
     'tid' => 'UA-110582977-2',
     'cid' => $ga->get_cid(),
     'ti' => 846478558,
@@ -50,20 +54,8 @@ $items = [
 // Send demo items
 
 foreach ($items as $key => $value) {
-  $data = [
-    'v' => 1, // API version
-    'tid' => $value['tid'],
-    'cid' => $value['cid'],
-    't' => 'item',
-    'ti' => $value['ti'],
-    'in' => $value['in'],
-    'ip' => $value['ip'],
-    'ic' => $value['ic'],
-    'iq' => $value['iq'],
-    'cu' => $value['cu']
-  ];
 
-  $res = $ga->send($data);
+  $res = $ga->send($value);
 
   var_dump($res); // true or false, if error
 }
