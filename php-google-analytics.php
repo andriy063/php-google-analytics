@@ -25,4 +25,14 @@ class php_google_analytics {
     return $success ? true : false;
   }
   
+  public function get_cid() {
+    $cid = preg_replace("/^.+\.(.+?\..+?)$/", "\\1", @$_COOKIE['_ga']);
+    if (!empty($cid)) {
+        return $cid;
+    }
+    
+    // If empty _ga, return random cid
+    return time().'.'.time();
+  }
+  
 }
