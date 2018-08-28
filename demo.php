@@ -4,13 +4,17 @@ require_once('php-google-analytics.php');
 
 $ga = new php_google_analytics;
 
+$ti = 846478558; // Unique transaction (order) id
+$tid = 'UA-110582977-2'; // Tracking ID
+$cid = $ga->get_cid(); // Client ID (from _ga Cookie)
+
 // Create Transaction
 $data = [
   'v' => 1, // API version
-  'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
-  'cid' => $ga->get_cid(), // Client ID
+  'tid' => $tid, // Tracking ID (like UA-XXXXX-Y)
+  'cid' => $cid, // Client ID
   't' => 'transaction',
-  'ti' => 846478558, // Unique transaction (order) id
+  'ti' => $ti, // Unique transaction (order) id
   'ta' => 'Affiliation', // Transaction affiliation
   'tr' => 100, // Order total
   'ts' => 10, // Order shipping
@@ -28,9 +32,9 @@ $items = [
   [
     'v' => 1, // API version
     't' => 'item',
-    'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
-    'cid' => $ga->get_cid(), // Client ID
-    'ti' => 846478558, // Unique transaction (order) id (same as above)
+    'tid' => $tid, // Tracking ID (like UA-XXXXX-Y)
+    'cid' => $cid, // Client ID
+    'ti' => $ti, // Unique transaction (order) id (same as above)
     'in' => 'First Item', // Name
     'ip' => 50, // Price (for one item!)
     'iq' => 1, // Quantity
@@ -40,9 +44,9 @@ $items = [
   [
     'v' => 1,
     't' => 'item',
-    'tid' => 'UA-110582977-2',
-    'cid' => $ga->get_cid(),
-    'ti' => 846478558,
+    'tid' => $tid,
+    'cid' => $cid,
+    'ti' => $ti,
     'in' => 'Second Item',
     'ip' => 50,
     'iq' => 1,
