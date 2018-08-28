@@ -7,7 +7,7 @@ $ga = new php_google_analytics;
 // Create Transaction
 $data = [
   'v' => 1, // API version
-  'tid' => 'UA-110582966-2', // Tracking ID (like UA-XXXXX-Y)
+  'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
   'cid' => $ga->get_cid(), // Client ID
   't' => 'transaction',
   'ti' => 846478558, // Unique transaction (order) id
@@ -26,7 +26,7 @@ var_dump($res); // true or false, if error
 // demo order items
 $items = [
   [
-    'tid' => 'UA-110582966-2', // Tracking ID (like UA-XXXXX-Y)
+    'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
     'cid' => $ga->get_cid(), // Client ID
     'ti' => 846478558, // Unique transaction (order) id (same as above)
     'in' => 'First Item', // Name
@@ -36,7 +36,7 @@ $items = [
     'cu' => 'USD' // Currency
   ],
   [
-    'tid' => 'UA-110582966-2',
+    'tid' => 'UA-110582977-2',
     'cid' => $ga->get_cid(),
     'ti' => 846478558,
     'in' => 'Second Item',
