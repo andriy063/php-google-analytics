@@ -8,7 +8,7 @@ https://developers.google.com/analytics/devguides/collection/protocol/v1/devguid
 Here is example (also in demo.php):
 
 
-
+    ```ruby
     require_once('php-google-analytics.php');
     $ga = new php_google_analytics;
     
@@ -74,3 +74,4 @@ Here is example (also in demo.php):
       $res = $ga->send($data);
       var_dump($res); // true or false, if error
     }
+    ```
