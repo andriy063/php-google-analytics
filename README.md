@@ -16,7 +16,7 @@ Here is example (also in demo.php):
     
     $data = [
       'v' => 1, // API version
-      'tid' => 'UA-110582966-2', // Tracking ID (like UA-XXXXX-Y)
+      'tid' => 'UA-1105829677-2', // Tracking ID (like UA-XXXXX-Y)
       'cid' => $ga->get_cid(), // Client ID
       't' => 'transaction',
       'ti' => 846478558, // Unique transaction (order) id
@@ -34,7 +34,7 @@ Here is example (also in demo.php):
     // demo order items
     $items = [
       [
-        'tid' => 'UA-110582966-2', // Tracking ID (like UA-XXXXX-Y)
+        'tid' => 'UA-110582977-2', // Tracking ID (like UA-XXXXX-Y)
         'cid' => $ga->get_cid(), // Client ID
         'ti' => 846478558, // Unique transaction (order) id (same as above)
         'in' => 'First Item', // Name
@@ -44,7 +44,7 @@ Here is example (also in demo.php):
         'cu' => 'USD' // Currency
       ],
       [
-        'tid' => 'UA-110582966-2',
+        'tid' => 'UA-110582977-2',
         'cid' => $ga->get_cid(),
         'ti' => 846478558,
         'in' => 'Second Item',
