@@ -2,6 +2,8 @@
 Google Analytics Measurement Protocol description:
 https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide
 
+    $ git clone https://github.com/andriy063/php-google-analytics.git
+
 **How to send Google Analytics transactions in php?**
 Here is example (also in demo.php):
 
